@@ -1,4 +1,4 @@
-const host = 'http://localhost:3002';
+const host = 'https://powerful-shore-55814.herokuapp.com';
 
 const getHeader = {
   method: 'GET',
