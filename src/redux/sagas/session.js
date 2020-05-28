@@ -1,5 +1,6 @@
 import { fork, takeEvery, call, put } from 'redux-saga/effects';
 import { pizzasEntered } from '../actions/campaigns';
+import { order } from '../actions/payment';
 import { types } from '../actions/session'
 import { getAllPizzas } from '../../data/campaigns';
 import { doneFetching, fetching } from '../actions/loading';
@@ -39,6 +40,7 @@ function* handleOrder(action) {
     orderArr.push(newOrder);
   }
   localStorage.setItem('order', JSON.stringify(orderArr));
+  return yield put(order(orderArr));
 }
 
 function* watchSessionActions() {

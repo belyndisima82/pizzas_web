@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import { Col, Icon, Menu, Modal } from 'antd';
+import { Col, Icon, Menu } from 'antd';
+import PropTypes from 'prop-types';
 import ImmutablePropTypes from 'react-immutable-proptypes';
 import { Map as ImmutableMap } from 'immutable';
 import './style.css';
@@ -8,15 +9,27 @@ import generalImages from '../../../img';
 
 
 class Navbar extends Component {
+
+  static propTypes = {
+    getOrder: PropTypes.func.isRequired,
+    order: ImmutablePropTypes.map,
+  };
+
+  static defaultProps = {
+    order: ImmutableMap(),
+  };
+
   constructor(props) {
     super(props);
     this.state = {
-      visible: false,
-      logOut: true,
-      deletedNotifications: 0,
       visibleMenu: false,
     };
   }
+
+  componentDidMount() {
+    this.props.getOrder()
+  }
+
 
   hide = () => {
     this.setState({
@@ -41,6 +54,7 @@ class Navbar extends Component {
 
 
   render() {
+    let orderSize = this.props.order.reduce((acc, item) => acc + item.get('quantity'), 0);
     let linkStyle = {};
     let logoOffset = 0;
     let logoMobileOffset = 0;
@@ -77,40 +91,19 @@ class Navbar extends Component {
                 <li className="nav-item active">
                   <Link to="/ourpizzas" href="/ourpizzas" style={linkStyle}>Our Pizzas</Link>
                 </li>
-                <li className="nav-item active">
+                <li className="nav-item active wrapper">
                   <Link to="/orders" href="/orders" className="cart" style={linkStyle}>
                     <img src={generalImages.cart} alt="Pizza car" />
+                    <p className="bottom-right">{orderSize}</p>
                   </Link>
                 </li>
               </ul>
             </Col>
           </nav>
         </Col>
-        <Modal
-          wrapClassName="menu-mobile"
-          title="Pizza express"
-          visible={this.state.visibleMenu}
-          onOk={this.handleOk}
-          onCancel={this.hideMenu}
-          footer={null}
-        >
-          <Menu mode="inline" onClick={this.hideMenu}>
-            <Menu.Item key="home"><Link to="/" href="/">Home</Link></Menu.Item>
-            <Menu.Item><Link to="/bloodraising" href="/bloodraising">Our Pizzas</Link></Menu.Item>
-            <Menu.Item><Link to="/shareparty" href="/shareparty">Order</Link></Menu.Item>
-          </Menu>
-        </Modal>
       </div>
     );
   }
 }
-
-Navbar.propTypes = {
-  selectOrder: ImmutablePropTypes.map,
-};
-
-Navbar.defaultProps = {
-  selectOrder: ImmutableMap(),
-};
 
 export default Navbar;

@@ -28,6 +28,18 @@
     .navbar-row .navbar {
       padding: 0.5em 0; } }
 
+.wrapper {
+  position: relative;
+  text-align: center;
+  color: white; }
+  .wrapper p {
+    font-size: 25px !important; }
+
+.bottom-right {
+  position: absolute;
+  bottom: 10px;
+  right: 9px; }
+
 .viewed {
   background: #F9F9F9 !important; }
 
