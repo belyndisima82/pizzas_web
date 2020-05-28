@@ -62,6 +62,7 @@ class FormView extends Component {
                             </Col>
                         </Row>
                         {this.props.order.map((item) => (
+                            item.get('quantity') < 1 ?
                             <Row>
                                 <Col md={3}>
                                     <img src={item.get('image')} style={{width: 100}} alt="pizza" />
@@ -74,7 +75,7 @@ class FormView extends Component {
                                 <Col md={3}>
                                     <Button onClick={(e) => { this.onDeleteItem(e, item.get('id')) }} type="submit" className="ant-btn btn-green btn-shadow btn-lg ant-btn-primary full-width" >{item.get('quantity') > 1 ? 'Drop 1 off': 'Delete item'}</Button>
                                 </Col>
-                            </Row>
+                            </Row> : null
                         ))
                         }
                         <Row gutter={16} type="flex" className="top-margin">

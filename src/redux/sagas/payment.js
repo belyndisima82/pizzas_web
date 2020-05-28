@@ -25,8 +25,7 @@ function* getOrder() {
 
 function* deleteItem(action) {
   var orderArr = JSON.parse(localStorage.getItem("order") || "[]");
-  console.log('primero', orderArr)
-  for (var i = 0; i <= orderArr.length; i += 1) {
+  for (var i = 0; i < orderArr.length; i += 1) {
     if (orderArr[i].id == action.payload) {
       if (orderArr[i].quantity > 0) {
         orderArr[i].quantity = orderArr[i].quantity - 1;
@@ -35,7 +34,6 @@ function* deleteItem(action) {
       }  
     }
   }
-  console.log(orderArr)
   localStorage.setItem('order', JSON.stringify(orderArr));
   return yield put(order(orderArr));
 }
