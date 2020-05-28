@@ -1,7 +1,7 @@
 import api from '../api';
 
-export const paymentInfo = () => (
-  api.orders.paymentInfo()
+export const paymentInfo = (data) => (
+  api.orders.postOrders(data)
     .then((response) => response.json())
     .then((rjson) => ({ response: rjson }))
     .catch((error) => ({ error }))

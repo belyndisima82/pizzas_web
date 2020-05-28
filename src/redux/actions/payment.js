@@ -3,6 +3,7 @@ export const types = {
     GET_ORDER: 'GET_ORDER',
     PIZZAS_ORDERED: 'PIZZAS_ORDERED',
     DELETE_ITEM: 'DELETE_ITEM',
+    CHECKOUT_STATUS: 'CHECKOUT_STATUS',
   };
   
   export const paymentInfo = (payload) => ({
@@ -22,6 +23,11 @@ export const types = {
 
   export const deleteItem = (payload) => ({
     type: types.DELETE_ITEM,
+    payload,
+  });
+
+  export const checkout = (payload) => ({
+    type: types.CHECKOUT_STATUS,
     payload,
   })
   

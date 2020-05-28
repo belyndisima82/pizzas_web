@@ -32,9 +32,7 @@ class FormView extends Component {
             address,
         } = this.state;
         e.preventDefault();
-        this.props.paymentInfo({
-            address,
-        });
+        this.props.paymentInfo(address);
         this.setState({
             email: null,
             name: null,

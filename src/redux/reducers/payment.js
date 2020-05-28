@@ -14,7 +14,10 @@ import {
           innerMap.set(action.payload[key].name, fromJS(value));
         });
       }));
-      
+
+      case types.CHECKOUT_STATUS:
+      return state.set = ImmutableMap();
+
       default:
         return state;
     }

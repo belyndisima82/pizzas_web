@@ -20,7 +20,6 @@ module.exports = {
   pizzas: {
     getAllPizzas() {
       const url = `${host}/pizzas`;
-      console.log(getHeader)
       return fetch(url, getHeader);
     }
   }, 
