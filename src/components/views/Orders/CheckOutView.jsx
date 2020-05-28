@@ -41,7 +41,7 @@ class Checkout extends Component {
         <div className="landing-top-section landingImage">
           <div className="overlay">
             <Row className="header" type="flex" align="middle">
-            {this.props.order ? 
+            {this.props.order.size ? 
               <Col md={{ span: 18, offset: 3 }} className="text-div" align="center">
                 <h3 className="white-text">HERE IS YOUR ORDER!!</h3>
                 <h1 className="white-text">ENJOY YOURSELF!!</h1>

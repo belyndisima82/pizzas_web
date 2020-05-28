@@ -27,7 +27,7 @@ function* deleteItem(action) {
   var orderArr = JSON.parse(localStorage.getItem("order") || "[]");
   for (var i = 0; i < orderArr.length; i += 1) {
     if (orderArr[i].id == action.payload) {
-      if (orderArr[i].quantity > 0) {
+      if (orderArr[i].quantity > 1) {
         orderArr[i].quantity = orderArr[i].quantity - 1;
       } else {
         orderArr.splice(i, 1)

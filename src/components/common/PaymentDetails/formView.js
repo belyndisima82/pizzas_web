@@ -53,7 +53,7 @@ class FormView extends Component {
         return (
             <div className="form">
                 <Row>
-                    { this.props.order ? 
+                    { this.props.order.size ? 
                     <div className="section">
                         <Row gutter={16} type="flex" className="top-margin">
                             <Col md={24} align="center">
@@ -62,7 +62,7 @@ class FormView extends Component {
                             </Col>
                         </Row>
                         {this.props.order.map((item) => (
-                            item.get('quantity') < 1 ?
+                            item.get('quantity') ?
                             <Row>
                                 <Col md={3}>
                                     <img src={item.get('image')} style={{width: 100}} alt="pizza" />
@@ -78,11 +78,14 @@ class FormView extends Component {
                             </Row> : null
                         ))
                         }
+                        { this.props.order.size ?
                         <Row gutter={16} type="flex" className="top-margin">
                             <Col align="left">
                                 <h2>Give us your details!</h2>
                             </Col>
-                        </Row>
+                        </Row> : null
+                        }
+                        { this.props.order.size ?
                         <Row gutter={16} type="flex">
                             <Form className="full-width" layout="inline" align="center">
                                 <Col md={4}>
@@ -95,13 +98,15 @@ class FormView extends Component {
                                     <Input type="email" value={this.state.email} placeholder="eMail" onChange={(e) => this.onChangeValue('email', e.target.value)} style={{ height: '48px' }} />
                                 </Col>
                                 <Col md={4}>
-                                    <Input value={this.state.company} placeholder="Address" onChange={(e) => this.onChangeValue('address', e.target.value)} style={{ height: '48px' }} />
+                                    <Input value={this.state.address} placeholder="Address" onChange={(e) => this.onChangeValue('address', e.target.value)} style={{ height: '48px' }} />
                                 </Col>
                                 <Col md={8}>
                                     <Button onClick={(e) => { this.onSubmitInfo(e) }} type="submit" className="ant-btn btn-green btn-shadow btn-lg ant-btn-primary full-width">Submit Order</Button>
                                 </Col>
                             </Form>
-                        </Row>
+                        </Row> 
+                        : null
+                        }
                     </div> :
                     null
                     }
