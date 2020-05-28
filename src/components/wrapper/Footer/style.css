@@ -1,0 +1,26 @@
+.gray-background {
+  background: #F9F9F9; }
+  .gray-background .footer p {
+    font-size: 14px;
+    line-height: 17px;
+    color: #707070;
+    font-weight: 100; }
+    .gray-background .footer p.title {
+      color: #E74C3C;
+      font-weight: 500;
+      margin-top: 34px;
+      padding-bottom: 0px; }
+  .gray-background .footer .apps img {
+    display: block;
+    max-width: 120px;
+    margin-bottom: 16px; }
+  .gray-background .footer .social .ant-btn {
+    border: none !important; }
+  .gray-background .footer.section {
+    margin-top: 0;
+    margin-bottom: 0; }
+  .gray-background .final-footer a {
+    font-size: 14px !important;
+    color: #707070; }
+  .gray-background .final-footer p {
+    font-size: 14px !important; }

@@ -1,0 +1,46 @@
+@import 'style/_colors.scss';
+@import 'style/_variables.scss';
+
+.gray-background {
+  background: $light-gray;
+
+  .footer {
+    p {
+      font-size: $text-body-size;
+      line-height: $regular-text-line-height;
+      color: $lighter-text;
+      font-weight: $section-body-fontweight;
+      &.title {
+        color: $brand-color;
+        font-weight: $subsection-header-fontweight;
+        margin-top: 34px;
+        padding-bottom: 0px;
+      }
+    }
+
+    .apps img {
+      display: block;
+      max-width: 120px;
+      margin-bottom: 16px;
+    }
+
+    .social .ant-btn {
+      border: none !important;
+    }
+
+    &.section {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+  }
+
+  .final-footer {
+    a {
+      font-size: $text-body-size!important;
+      color: $lighter-text;
+    }
+    p {
+      font-size: $text-body-size!important;
+    }
+  }
+}

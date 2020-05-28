@@ -1,0 +1,237 @@
+@import 'style/_colors.scss';
+@import 'style/_variables.scss';
+
+.home-view-container {
+  .landing-top-section {
+    max-height: $medium-spacing * 50;
+    margin-top: 0 !important;
+  }
+
+  .landingImage {
+    height: 650px;
+    background-image: url('../../../img/pizza_header.jpg');
+    background-repeat: no-repeat, repeat;
+    background-size: cover;
+    background-position: center;
+    
+    h1 {
+      color: white !important;
+    }
+    .margin-top {
+      margin-top: $big-spacing * 6;
+    }
+  }
+
+  .btn-main-video {
+    height: 50px!important;
+    width: 220px!important;
+  }
+
+  .header {
+    .text-div {
+      padding-bottom: $regular-view-padding * 2;
+      top: 180px;
+    }
+  }
+
+  .overlay {
+    min-height: 100%;
+    width: 100%;
+    background: $transparent-overlay;
+    text-align: center;
+  }
+
+  .section {
+    h2 {
+      text-align: center;
+      margin-bottom: $big-spacing;
+    }
+  }
+
+  .companies-section {
+    margin-top: $medium-spacing * 3;
+    margin-bottom: $medium-spacing * 3;
+    .campany-card-div {
+      margin-top: $medium-spacing * 15;
+    }
+    .company-card-body {
+      padding-top: $medium-spacing * 5;
+      padding-bottom: $medium-spacing * 5;
+      padding-left: $medium-spacing;
+      padding-right: $medium-spacing;
+    }
+    h5{
+      margin-left: 8px;
+      line-height: 0px;
+    }
+    .orgs-name {
+      margin-top: 40px;
+    }
+  }
+
+  .history-section {
+    background-color: $brand-color;
+    width: 100%;
+
+    .thumb{
+      height: $medium-spacing * 36 !important;
+    }
+
+    p{
+      padding-top: $medium-spacing * 2;
+    }
+    
+    h2 {
+      color: $inverse-color;
+    }
+  }
+
+  .promotional-container{
+    width: 100%;
+    min-height: 450px;
+    background-position: 50% 0%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    .overlay {
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      position: absolute;
+      padding: $big-spacing;
+      background-color: $strong-overlay;
+      color: $inverse-color !important; 
+      text-align: center !important;
+    }
+    .overlay-body {
+      position: absolute;
+      top: 21%;
+      left: 0;
+      right: 0;
+  
+      h2 {
+        color: $inverse-color !important; 
+        font-weight: $section-header-font-weight;
+        margin-bottom: $big-spacing;
+      }
+    }
+  }
+
+  @media screen and (max-width: $break-mobile) {
+    .header {
+      .text-div {
+        top: 80px;
+      }
+      h1 {
+        font-size: 30px;
+      }
+    }
+    .promotional-container{
+      .overlay{
+        position: relative;
+        padding-bottom: 40px;
+      }
+      .overlay-body{
+        position: relative;
+      }
+    }
+  }
+
+  .ant-card-bordered {
+    border-radius: 20px 20px 0px 0px !important;
+  }
+  .ant-card-cover {
+    height: $medium-spacing * 18 !important;
+    position: relative !important;
+    -webkit-background-size: cover !important;
+    -moz-background-size: cover !important;
+    -o-background-size: cover !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    background-position: 50% 50% !important;
+    border-radius: 20px 20px 0px 0px !important;
+    overflow-y: hidden !important;
+    overflow-x: hidden !important;
+  }
+
+  .ant-card-body {
+    height: $medium-spacing * 25 !important;
+  }
+
+  .newsCards {
+    .card {
+      margin: 0;
+      padding: 0;
+      border: 0;
+      height: 445px;
+      border-radius: $regular-spacing * 5;
+      width: 100%;
+      background-color: white;
+      -webkit-box-shadow: 0px 3px 6px $card-shadow;
+      -moz-box-shadow:    0px 3px 6px $card-shadow;
+      box-shadow:         0px 3px 6px $card-shadow;
+    
+      .card-top {
+        height: $medium-spacing * 25;
+        position: relative;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        background-repeat: no-repeat !important;
+        background-position: 50% 50% !important;
+        border-radius: 25px 25px 0px 0px;
+        
+        .card-header-desc {
+          padding: $big-spacing;
+          color: white;
+          position: absolute;
+          bottom: 0;
+          
+          p {
+            &.header {
+              font-weight: bold;
+            }
+            margin-bottom: 0px;
+          }
+        }
+      }
+      
+      .card-body {
+        color: $lighter-text;
+        padding: $big-spacing;
+        height: $medium-spacing * 18;
+    
+        .description {
+          height: $medium-spacing * 25;
+        }
+
+        .card-info{
+          height: 100px;
+        }
+      }
+    }
+    
+    .card:hover,
+    .card:active,
+    .card:focus{
+      cursor: pointer;
+      -webkit-box-shadow: 0px 3px 6px $card-hover;
+      -moz-box-shadow: 0px 3px 6px $card-hover;
+      box-shadow: 0px 3px 6px $card-hover;
+    }
+  }
+  .videos {
+    padding-bottom: 50px;
+  }
+  .bot-footer {
+    background: $brand-color;
+    padding: $big-spacing * 4;
+    h1, h4{
+      color: white;
+    }
+    button{
+      margin: 50px 0;
+    }
+  }
+}

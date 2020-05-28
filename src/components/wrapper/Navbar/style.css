@@ -1,0 +1,74 @@
+.navbar-row {
+  position: absolute;
+  width: 100%; }
+  .navbar-row .navbar {
+    margin-left: auto;
+    margin-right: auto; }
+    .navbar-row .navbar .navbar-nav {
+      flex-direction: row; }
+      .navbar-row .navbar .navbar-nav li {
+        margin-top: 15px;
+        padding: 10px;
+        margin-left: 10px; }
+        .navbar-row .navbar .navbar-nav li a {
+          color: #FFF; }
+  .navbar-row .navbar-brand img {
+    width: 130%; }
+  .navbar-row .nav-item {
+    font-size: 24px; }
+  .navbar-row .logout {
+    text-align: right;
+    margin-top: .4% !important; }
+    .navbar-row .logout button {
+      border-color: transparent !important;
+      background-color: transparent !important; }
+      .navbar-row .logout button img {
+        border-radius: 50%; }
+  @media screen and (max-width: 992px) {
+    .navbar-row .navbar {
+      padding: 0.5em 0; } }
+
+.viewed {
+  background: #F9F9F9 !important; }
+
+.popover-menu {
+  width: 300px; }
+  .popover-menu .ant-popover-arrow {
+    right: 7px !important; }
+  .popover-menu .ant-popover-inner-content {
+    padding: 0 !important; }
+  .popover-menu #navbar-popover .ant-menu-item > a {
+    color: #707070; }
+
+.nav-phone-icon {
+  display: block;
+  position: absolute;
+  right: 15px;
+  top: 25px;
+  z-index: 1;
+  width: 20px;
+  height: 20px;
+  cursor: pointer; }
+
+.nav-phone-icon:before {
+  content: "";
+  display: block;
+  border-radius: 2px;
+  width: 20px;
+  height: 2px;
+  background: #707070;
+  -webkit-box-shadow: 0 6px 0 0 #707070, 0 12px 0 0 #707070;
+  box-shadow: 0 6px 0 0 #707070, 0 12px 0 0 #707070;
+  position: absolute; }
+
+.cart img {
+  width: 45px; }
+
+.menu-mobile .ant-menu-inline {
+  border-right: 0 !important; }
+
+.menu-mobile .ant-menu-vertical .ant-menu-item::after, .menu-mobile .ant-menu-vertical-left .ant-menu-item::after, .menu-mobile .ant-menu-vertical-right .ant-menu-item::after, .menu-mobile .ant-menu-inline .ant-menu-item::after {
+  border-right: 3px solid #63E57B !important; }
+
+.menu-mobile .ant-menu-item-selected > a {
+  color: #63E57B !important; }

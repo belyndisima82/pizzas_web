@@ -1,0 +1,17 @@
+.form {
+  width: 100%; }
+  .form .section {
+    padding-left: 30px;
+    padding-right: 30px; }
+  .form h2, .form p {
+    color: #5AE5E1; }
+  .form .ant-input {
+    height: 45px !important;
+    margin-bottom: 8px !important; }
+  .form .ant-btn {
+    height: 45px !important; }
+  .form .top-margin {
+    margin-top: 40px; }
+  @media screen and (max-width: 640px) {
+    .form .red-background h4 {
+      text-align: center; } }

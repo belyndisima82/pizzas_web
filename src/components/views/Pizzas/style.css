@@ -1,0 +1,36 @@
+.search-view .ant-carousel {
+  height: 550px;
+  width: 100%; }
+  .search-view .ant-carousel .slider {
+    height: 100%; }
+    .search-view .ant-carousel .slider .slick-slide {
+      height: 100%; }
+    .search-view .ant-carousel .slider .slide {
+      height: 550px; }
+      .search-view .ant-carousel .slider .slide .overlay {
+        height: 100%;
+        width: 100%;
+        padding-top: 250px;
+        background: rgba(0, 0, 0, 0.35);
+        text-align: center; }
+        .search-view .ant-carousel .slider .slide .overlay h3 {
+          color: #FFF; }
+
+.search-view .container .pint p {
+  margin-top: 30px; }
+
+.search-view .container .select-col .ant-select,
+.search-view .container .select-col .ant-calendar-picker {
+  width: 100% !important; }
+
+.search-view .container .select-col.left-select .ant-select {
+  width: 100% !important; }
+
+.search-view .container .ant-input, .search-view .container .ant-select, .search-view .container .ant-select-enabled, .search-view .container .ant-select-selection--single, .search-view .container .ant-input-number {
+  height: 45px !important; }
+
+.search-view .container .count-title h2 {
+  margin-top: 15px; }
+  .search-view .container .count-title h2 span {
+    margin-right: 5px;
+    color: #5AE5E1; }

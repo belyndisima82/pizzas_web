@@ -1,0 +1,107 @@
+@import 'style/_colors.scss';
+@import 'style/_variables.scss';
+.navbar-row {
+  position: absolute;
+  width: 100%;
+  .navbar {
+    margin-left: auto;
+    margin-right: auto;
+    .navbar-nav {
+      flex-direction: row;
+  
+      li {
+        margin-top: $big-spacing;
+        padding: $medium-spacing;
+        margin-left: $medium-spacing;
+        a {
+          color: $inverse-color;
+        }
+      }
+    }
+  }
+  .navbar-brand {
+    img {
+      width: 130%;
+    }
+  }
+  .nav-item {
+    font-size: 24px;
+  }
+  .logout {
+    text-align: right;
+    margin-top: .4% !important;
+
+    button {
+      border-color: transparent !important;
+      background-color: transparent !important;
+      
+      img {
+        border-radius: 50%;
+      }
+    }
+  }
+
+  @media screen and (max-width: 992px){
+    .navbar {
+      padding: 0.5em 0;
+    }
+  }
+}
+
+.viewed{
+  background: $light-gray !important;
+}
+.popover-menu {
+  width: $medium-spacing * 30;
+  .ant-popover-arrow {
+    right: $regular-spacing + 2 !important;
+  }
+  .ant-popover-inner-content {
+    padding: 0 !important;
+  }
+  #navbar-popover {
+    .ant-menu-item > a{
+      color: #707070;
+    }
+  }
+}
+.nav-phone-icon {
+  display: block;
+  position: absolute;
+  right: $big-spacing;
+  top: $regular-spacing * 5;
+  z-index: 1;
+  width: $medium-spacing * 2;
+  height: $medium-spacing * 2;
+  cursor: pointer;
+}
+.nav-phone-icon:before {
+  content: "";
+  display: block;
+  border-radius: $medium-spacing / 5;
+  width: $medium-spacing * 2;
+  height: $medium-spacing / 5;
+  background: $lighter-text;
+  -webkit-box-shadow: 0 6px 0 0 $lighter-text, 0 12px 0 0 $lighter-text;
+  box-shadow: 0 6px 0 0 $lighter-text, 0 12px 0 0 $lighter-text;
+  position: absolute;
+}
+
+.cart {
+  img {
+    width: 45px;
+  }
+}
+
+
+.menu-mobile {
+  .ant-menu-inline{
+    border-right: 0 !important;
+  }
+  .ant-menu-vertical .ant-menu-item::after, .ant-menu-vertical-left .ant-menu-item::after, .ant-menu-vertical-right .ant-menu-item::after, .ant-menu-inline .ant-menu-item::after {
+    border-right: 3px solid $green-color !important;
+  }
+  .ant-menu-item-selected > a{
+    color: $green-color !important;
+  }
+}

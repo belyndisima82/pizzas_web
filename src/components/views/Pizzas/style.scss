@@ -1,0 +1,72 @@
+@import 'style/_colors.scss';
+@import 'style/_variables.scss';
+
+.search-view {
+
+  .ant-carousel {
+    height: 550px;
+    width: 100%;
+
+    .slider {
+      height: 100%;
+
+      .slick-slide {
+        height: 100%;
+      }
+
+      .slide {
+        height: 550px;
+
+        .overlay {
+          height: 100%;
+          width: 100%;
+          padding-top: 250px;
+          background: $transparent-overlay;
+          text-align: center;
+
+          h3 {
+            color: $inverse-color;
+          }
+        }
+      }
+    }
+  }
+
+  .container {
+    .pint {
+      p {
+        margin-top: 30px;
+      }
+    }
+
+    .select-col {
+      .ant-select,
+      .ant-calendar-picker {
+        width: 100% !important;
+      }
+
+      &.left-select {
+        .ant-select {
+          width: 100% !important;
+        }
+      }
+    }
+
+
+    .ant-input, .ant-select, .ant-select-enabled, .ant-select-selection--single, .ant-input-number {
+      height: 45px !important;
+    }
+  
+    .count-title {
+          
+      h2 {
+        margin-top: $big-spacing;
+    
+        span {
+          margin-right: $regular-spacing;
+          color: $blue-color;
+        }
+      }
+    }
+  }
+}

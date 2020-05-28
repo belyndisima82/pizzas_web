@@ -1,0 +1,33 @@
+@import 'style/_colors.scss';
+@import 'style/_variables.scss';
+
+.form {
+  width: 100%;
+
+  .section {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  h2, p {
+    color: $blue-color;
+  }
+
+  .ant-input {
+    height: 45px !important;
+    margin-bottom: 8px !important;
+  }
+
+  .ant-btn {
+    height: 45px!important;
+  }
+
+  .top-margin {
+    margin-top: 40px;
+  }
+  @media screen and (max-width: $break-mobile) {
+    .red-background h4 {
+      text-align: center;
+    }
+  }  
+}

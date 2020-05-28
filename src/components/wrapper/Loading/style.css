@@ -1,0 +1,14 @@
+.loading {
+  background: rgba(0, 0, 0, 0.35);
+  padding: 0;
+  margin: 0;
+  position: fixed !important;
+  z-index: 99999 !important;
+  top: 0;
+  left: 150px !important;
+  width: 10% !important;
+  height: 10% !important; }
+  .loading img {
+    display: block;
+    margin-bottom: 16px;
+    margin-left: 21vw; }

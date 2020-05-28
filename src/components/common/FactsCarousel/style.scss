@@ -1,0 +1,52 @@
+@import 'style/_colors.scss';
+
+#FactsCarousel {
+  display: relative;
+  background-color:$blue-color;
+  min-height: 55vh;
+
+  h3{
+    font-size: 36px!important;
+    color: white;
+  }
+
+  .padding-facts {
+    padding-right: 60px;
+    padding-left: 60px;
+  }
+
+  .carousel-item {
+    height: 530px; 
+  }
+  
+  .ant-carousel .slick-dots li button {
+    background-color: $inverse-color !important;
+    margin: 0px 10px;
+    border-radius: 50%;
+    opacity: 1;
+    height: 15px !important;
+    width: 15px !important;
+  }
+  
+  .ant-carousel .slick-dots li.slick-active button {
+    background-color: $brand-color !important; 
+  }
+  
+  .ant-carousel .slick-dots {
+    height: 30px !important;
+    left: 0% !important;
+    @media only screen and (max-width: 768px) {
+      height: 18px !important;
+    }
+  }
+  
+  .ant-carousel {
+    color: $inverse-color;
+  }
+  
+  .ant-carousel .slick-slider {
+    position: static !important; 
+    text-align: center; 
+  }
+  
+}

@@ -1,0 +1,856 @@
+// *
+// Absolute Imports
+//*
+@import '~antd/dist/antd.css';
+@import 'style/_colors.scss';
+@import 'style/_variables.scss';
+
+// *
+// Fonts
+// *
+@font-face {
+	font-family: 'Gotham-Book';
+	src: url('../fonts/Gotham-Book.woff') format('woff'),
+	url('../fonts/Gotham-Book.ttf')  format('truetype')
+}
+
+@font-face {
+	font-family: 'Gotham-Bold';
+	src: url('../fonts/Gotham-Bold.woff') format('woff'),
+	url('../fonts/Gotham-Bold.ttf')  format('truetype')
+}
+
+@font-face {
+	font-family: 'Gotham-Medium';
+	src: url('../fonts/Gotham-Medium.woff') format('woff'),
+	url('../fonts/Gotham-Medium.ttf')  format('truetype')
+}
+
+// *
+// Media Queries
+// *
+@media only screen and (min-width: 991.99px) {
+  #navbar-popover {
+    display: none;
+  }
+  .nav-phone-icon {
+    display: none !important;
+  }
+  .campany-card-div {
+    margin-bottom: 0px !important;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .containerCommunity {
+    max-width: 1400px !important;
+  }
+}
+
+
+.view-container {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+}
+
+body {
+  background: $view-background;
+  color: $lighter-text;
+  font-family: $font-family-medium;
+
+  .gray-background {
+    background: $light-gray;
+  }
+
+  .red-background {
+    background: $brand-color;
+  }
+
+  .green-background {
+    background: $green-color;
+  }
+
+  .inner-vertical-padding {
+    padding-top: $big-spacing * 2;
+    padding-bottom: $big-spacing * 2;
+  }
+
+  .no-margin-bottom {
+    margin-bottom: 0 !important;
+  }
+  .margin-top-small {
+    margin-top: 12px;
+  }
+  .margin-top {
+    margin-top: $big-spacing * 2;
+  }
+  .margin-bottom {
+    margin-bottom: 15px;
+  }
+  .card-margin-bottom {
+    margin-bottom: 24px;
+  }
+  .card-info-height {
+    height: 100%;
+  }
+  .small-margin-top {
+    margin-top: 12px;
+  }
+  .padding-container {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .table-shadow {
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+  }
+};
+
+// Headings
+h1 {
+  font-size: $h1-font-size;
+  color: $lighter-text;
+  font-family: $font-family-bold;
+}
+
+h2 {
+  font-size: $h2-font-size;
+  color: $lighter-text;
+  font-family: $font-family-bold;
+}
+
+h3 {
+  font-size: $h3-font-size;
+  color: $lighter-text;
+  font-family: $font-family-bold;
+}
+
+h4 {
+  font-size: $h4-font-size;
+  color: $lighter-text;
+  font-family: $font-family-bold;
+}
+
+h5 {
+  font-size: $h5-font-size;
+  color: $lighter-text;
+  font-family: $font-family-bold;
+}
+
+// Text
+p {
+  font-size: $paragraph-text-size;
+  font-family: $font-family-medium;
+}
+.petite-font {
+  font-size: $petite-text-size;
+  font-family: $font-family-medium;
+}
+
+.red-text {
+  color: $brand-color;
+}
+
+.white-text {
+  color: $inverse-color !important;
+}
+
+.green-text {
+  color: $green-color;
+}
+
+.gray-text {
+  color: $lighter-text;
+}
+
+.book {
+  font-family: $font-family-book;
+}
+
+// Buttons
+.callToAction {
+  padding: 5px;
+  padding-left: 20px;
+  padding-right: 20px;
+  height: 40px;
+  background: $green-color;
+  color: $dark-green-color;
+};
+
+.submit-button {
+  width: 100%;
+  border: none;
+  text-align: center;
+  padding-top: $medium-spacing;
+  padding-bottom: $medium-spacing;
+  border-radius: $regular-spacing;
+  background-color: $green-color;
+  color: $inverse-color;
+}
+
+.text-button {
+  border: 0;
+  width: 100%;
+  text-align: center;
+  padding-top: $medium-spacing;
+  padding-bottom: $medium-spacing;
+  background-color: transparent;
+
+  &-green {
+    color: $green-color;
+  }
+}
+
+.text-button-regular {
+  border: 0;
+  text-align: center;
+  padding-top: $medium-spacing;
+  padding-bottom: $medium-spacing;
+  background-color: transparent;
+
+  &-green {
+    color: $green-color;
+  }
+}
+
+.ant-btn-primary {
+  background: $green-color;
+  border-color: $green-color;
+
+  &:hover,
+  &:focus,
+  &:active {
+    background: $green-shadow2 !important;
+    border-color: $green-shadow2 !important;
+  }
+}
+
+.ant-btn-emergency {
+  background: $brand-color;
+  border-color: $brand-color;
+
+  &:hover,
+  &:focus,
+  &:active {
+    background: $brand-color;
+  }
+}
+
+.ant-btn-regular {
+  background: $inverse-color;
+  border-color: $green-color;
+  color: $green-color;
+
+  &:hover,
+  &:focus,
+  &:active {
+    background: $green-shadow1;
+    color: $inverse-color !important;
+  }
+}
+
+.ant-btn-secondary {
+  background: $medium-gray;
+  border-color: $medium-gray;
+  color: $inverse-color;
+
+  &:hover,
+  &:focus,
+  &:active {
+    background: $inverse-color !important;
+    border-color: $green-color;
+    color: $medium-gray !important;
+  }
+}
+
+.facebook-btn {
+  border-color: $facebook-color;
+  width: 100%;
+  color: $inverse-color;
+  background-color: $facebook-color;
+  margin-bottom: $medium-spacing;
+  padding: 10px 5px;
+
+  &:hover,
+  &:active,
+  &:focus {
+    color: $inverse-color;
+    background-color: $facebook-lighter;
+  }
+}
+
+.btn-green {
+  padding: 10px 5px;
+  height: auto;
+  &:hover,
+  &:active,
+  &:focus{
+    background: $green-shadow2 !important;
+    border-color: $green-shadow2 !important;
+  }
+}
+
+.btn-white {
+  &:hover,
+  &:active,
+  &:focus{
+    background: $green-shadow1 !important;
+  border-color: $green-shadow2 !important;
+  }
+}
+
+.btn-green-outline {
+  color: $green-color;
+  background: transparent;
+  border-color: $green-color;
+  border-width: 2px;
+
+  &:hover,
+  &:active,
+  &:focus{
+    background: $green-color !important;
+    border-color: $green-color !important;
+  }
+}
+
+.btn-red{
+  background: $brand-color !important;
+  border-color: $brand-color !important;
+  color: white;
+
+  &:hover,
+  &:active,
+  &:focus{
+    background: $brand-color !important;
+    border-color: $brand-color !important;
+    color: white;
+  }
+}
+
+.btn-grey-outline {
+  color: $light-gray;
+  background: transparent;
+  border-color: $dark-gray;
+  border-width: 2px;
+
+  &:hover,
+  &:active,
+  &:focus{
+    background: $light-gray !important;
+    border-color: $light-gray !important;
+  }
+}
+
+.btn-red-outline {
+  color: $brand-color;
+  background: transparent;
+  border-color: $brand-color;
+  border-width: 2px;
+
+  &:hover,
+  &:active,
+  &:focus{
+    background: $brand-color !important;
+    border-color: $brand-color !important;
+  }
+}
+
+.btn-blue {
+  color: white;
+  background: $blue-color;
+  border-color: $blue-color;
+  border-width: 2px;
+  padding: 10px 5px;
+  height: auto;
+  &:hover,
+  &:active,
+  &:focus{
+    background: transparent !important;
+    border-color: $blue-color !important;
+    color: $blue-color !important;
+  }
+}
+
+.btn-blue-outline {
+  color: $blue-color;
+  background: transparent;
+  border-color: $blue-color;
+  border-width: 2px;
+  padding: 10px 5px;
+  height: auto;
+  &:hover,
+  &:active,
+  &:focus{
+    background: $blue-color !important;
+    border-color: $blue-color !important;
+    color: $inverse-color !important;
+  }
+}
+
+.btn-grey {
+  color: $dark-gray;
+  background: $medium-gray;
+  padding: 10px 5px;
+  height: auto;
+  &:hover,
+  &:active,
+  &:focus{
+    color: $dark-gray;
+    background: $dark-medium-gray !important;
+    border-color: $dark-medium-gray !important;
+  }
+}
+
+.btn-shadow {
+  -webkit-box-shadow: $btn-shadow;
+  -moz-box-shadow: $btn-shadow;
+  box-shadow: $btn-shadow;
+}
+
+.btn-round {
+  border-radius: $btn-radius;
+}
+
+.btn-lg {
+  padding: 10px 16px;
+  font-size: 18px;
+  height: 46px !important;
+  margin-bottom: 5px;
+}
+
+.btn-lg-modal {
+  padding: 10px 16px;
+  font-size: 18px;
+  border: 0;
+  border-radius: 0;
+  margin-bottom: 0;
+  height: 60px !important;
+}
+
+.btn-md {
+  font-size: 18px;
+  height: 38px !important;
+  margin-bottom: 5px;
+}
+
+.instagram-share-icon {
+  background: #E1306C;
+  border-radius: 50%;
+  width: 46px;
+  height: 46px;
+  margin: 0px;
+  padding: 0px;
+
+  &:hover,
+  &:active,
+  &:focus {
+    background:#b42656;
+  }
+}
+
+.twitter-share-icon {
+  background: #00acee;
+  border-radius: 50%;
+  width: 46px;
+  height: 46px;
+  margin: 0px;
+  padding: 0px;
+  border: none;
+
+  &:hover,
+  &:active,
+  &:focus {
+    background:#0090c7;
+  }
+}
+
+.twitter-share-icon2 {
+  background: #00acee;
+  border-radius: 50%;
+  width: 65px;
+  height: 65px;
+  margin: 0px;
+  padding: 0px;
+  border: none;
+
+  &:hover,
+  &:active,
+  &:focus {
+    background:#0090c7;
+  }
+}
+
+.facebook-share-icon {
+  background: #3C5A99;
+  color: white;
+  border-radius: 50%;
+  width: 46px;
+  height: 46px;
+  margin: 0px;
+  padding: 0px;
+  border: none;
+
+  &:hover,
+  &:active,
+  &:focus {
+    background:#2e4474;
+  }
+}
+
+.facebook-share-icon2 {
+  background: #3C5A99;
+  color: white;
+  border-radius: 50%;
+  width: 65px;
+  height: 65px;
+  margin: 0px;
+  padding: 0px;
+  border: none;
+
+  &:hover,
+  &:active,
+  &:focus {
+    background:#2e4474;
+  }
+}
+
+.whatsapp-share-icon {
+  background: #25D366;
+  color: white;
+  border-radius: 50%;
+  width: 46px;
+  height: 46px;
+  margin: 0px;
+  padding: 0px;
+  border: none;
+
+  &:hover,
+  &:active,
+  &:focus {
+    background:#1da851;
+  }
+}
+
+.whatsapp-share-icon2 {
+  background: #25D366;
+  color: white;
+  border-radius: 50%;
+  width: 65px;
+  height: 65px;
+  margin: 0px;
+  padding: 0px;
+  border: none;
+
+  &:hover,
+  &:active,
+  &:focus {
+    background:#1da851;
+  }
+}
+
+
+.messenger-share-icon {
+  background: #0078FF;
+  color: white;
+  border-radius: 50%;
+  width: 46px;
+  height: 46px;
+  margin: 0px;
+  padding: 0px;
+  border: none;
+
+  &:hover,
+  &:active,
+  &:focus {
+    background:#0060cc;
+  }
+}
+
+.messenger-share-icon2 {
+  background: #0078FF;
+  color: white;
+  border-radius: 50%;
+  width: 65px;
+  height: 65px;
+  margin: 0px;
+  padding: 0px;
+  border: none;
+
+  &:hover,
+  &:active,
+  &:focus {
+    background:#0060cc;
+  }
+}
+
+// DatePickers 
+
+.ant-calendar-input-wrap {
+  display: none !important;
+}
+
+.ant-calendar-date-input-wrap {
+  display: none !important;
+}
+.ant-calendar-input {
+  display: none !important;
+}
+
+// Overlays
+.transparent-overlay {
+  background: $transparent-overlay !important;
+  border-radius: 25px 25px 0px 0px;
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+}
+
+.strong-overlay {
+  background: $strong-overlay !important;
+  border-radius: 25px 25px 0px 0px;
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+}
+
+.strong-overlay-complete {
+  background: $strong-overlay-complete !important;
+  border-radius: 0px 0px 25px 25px;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+}
+
+// Divs
+.section {
+  padding-top: $big-spacing * 4;
+  padding-bottom: $big-spacing * 4;
+}
+
+.card-info {
+  height: 63px;
+}
+
+// General Rules
+.full-width {
+  width: 100%;
+}
+
+.full-height {
+  height: 100%;
+}
+
+.no-margin {
+  margin: 0 !important;
+}
+
+.no-padding {
+  padding: 0 !important;
+}
+
+.text-center {
+  text-align: center;
+}
+
+// Font Sizes
+.font-14 {
+  font-size: 14px !important;
+}
+
+.ant-popover {
+  font-family: $font-family-medium;
+}
+
+.ant-menu {
+  font-family: $font-family-medium;
+}
+
+.pull-right {
+  float: right !important;
+}
+
+.pull-left {
+  float: left !important;
+}
+.background-view {
+  .slide {
+    height: $medium-spacing * 55;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+    .overlay {
+      height: 100%;
+      width: 100%;
+      background: rgba(0,0,0,0.45);
+    }
+  }
+}
+
+// Modals
+
+.campaignModal {
+  width: 80% !important;
+}
+
+.schedule-button {
+  padding: 0 !important;
+}
+
+.inputMargin {
+  margin: 10px 0;
+}
+
+.ant-divider-inner-text {
+  color: $lighter-text;
+}
+
+.invertColor {
+  .overlay {
+    background: $inverse-color !important;
+    color: $lighter-text !important;
+    h1 {
+      color: $lighter-text !important;
+    }
+    p {
+      color: $lighter-text !important;
+    }
+  } 
+}
+
+@media screen and (max-width: $break-mobile) {
+  h1 {
+    font-size: $h2-font-size
+  }
+  h2 {
+    font-size: $h3-font-size
+  }
+  h3 {
+    font-size: $h4-font-size
+  }
+  h4 {
+    font-size: $h5-font-size
+  }
+}
+
+@media (max-width: $break-mobile) {
+  .hands-section {
+    img {
+      width: $medium-spacing * 50 !important;
+    }
+  }
+}
+
+@media (max-width: $break-small) {
+  .campany-card-div {
+    margin-top: 0 !important;
+  }
+  #companies {
+    h4 {
+      margin-top: $big-spacing;
+      text-align: center;
+    }
+  }
+  .sharePatient {
+    .shareText {
+      padding-bottom: 100px !important;
+    }
+  }
+  .hands-section {
+    img {
+      width: $medium-spacing * 70;
+    }
+  }
+  #FactsCarousel {
+    min-height: 35vh !important;
+    h3{
+      font-size: $h4-font-size !important;
+      color: white;
+    }
+    .carousel-item {
+      height: 342px !important; 
+    }
+  }
+  .card-body {
+    .schedules {
+      button {
+        font-size: $paragraph-text-size;
+      }
+    }
+  }
+  .schedule-button {
+    font-size: $paragraph-text-size;
+  }
+  .background-view {
+    .slide {
+      height: $medium-spacing * 35;
+    }
+  }
+  .campaign-detail {
+    .hands-section {
+      height: $medium-spacing * 28;
+    }
+  }
+  .feels-good-main-div {
+    height: $medium-spacing * 46 !important;
+  }
+  .bloodHeader {
+    padding-top: 20vw !important;
+  }
+  .shareParty-view-container {
+    .shareImage {
+      height: $medium-spacing * 38;
+    }
+    .header {
+      top: 80px !important;
+      h1 {
+        font-size: $h3-font-size !important;
+      }
+    }
+  }
+  #fb-root {
+    display: none;
+  }
+}
+.react-phone-number-input__row {
+  border: none;
+  padding: 4px 11px;
+  font-size: 14px;
+  line-height: 1.5;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #d9d9d9;
+  border-radius: 4px;
+  font-variant: tabular-nums;
+  list-style: none;
+  -webkit-font-feature-settings: 'tnum';
+  font-feature-settings: 'tnum', "tnum";
+  position: relative;
+  width: 100%;
+  height: 40px;
+}
+.react-phone-number-input__icon {
+  height: auto;
+  border: none;
+}
+.react-phone-number-input__input {
+  border: none;
+}
+.react-phone-number-input {
+  ::placeholder {
+    color: #B7B7B7;
+    opacity: 1;
+  }
+
+  :-ms-input-placeholder {
+    color: #B7B7B7;
+  }
+
+  ::-ms-input-placeholder {
+    color: #B7B7B7;
+  }
+}
