@@ -1,16 +1,4 @@
 @import url(~antd/dist/antd.css);
-@font-face {
-  font-family: 'Gotham-Book';
-  src: url("../fonts/Gotham-Book.woff") format("woff"), url("../fonts/Gotham-Book.ttf") format("truetype"); }
-
-@font-face {
-  font-family: 'Gotham-Bold';
-  src: url("../fonts/Gotham-Bold.woff") format("woff"), url("../fonts/Gotham-Bold.ttf") format("truetype"); }
-
-@font-face {
-  font-family: 'Gotham-Medium';
-  src: url("../fonts/Gotham-Medium.woff") format("woff"), url("../fonts/Gotham-Medium.ttf") format("truetype"); }
-
 @media only screen and (min-width: 991.99px) {
   #navbar-popover {
     display: none; }
