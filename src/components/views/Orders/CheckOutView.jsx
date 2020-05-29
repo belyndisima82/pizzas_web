@@ -6,7 +6,6 @@ import PaymentDetails from '../../common/PaymentDetails';
 import { Map as ImmutableMap } from 'immutable';
 import ImmutablePropTypes from 'react-immutable-proptypes';
 import './style.css';
-import Helmet from 'react-helmet';
 
 
 class Checkout extends Component {
@@ -35,9 +34,6 @@ class Checkout extends Component {
     window.prerenderReady = true;
     return (
       <div className="view-container home-view-container">
-        <Helmet>
-          <title>PizzaExpress | Your favourite one</title>
-        </Helmet>
         <div className="landing-top-section landingImage">
           <div className="overlay">
             <Row className="header" type="flex" align="middle">
