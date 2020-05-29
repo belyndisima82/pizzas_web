@@ -26,5 +26,7 @@ app.get('*', function(req, res) {
   res.sendFile(path.join(publicPath, 'index.html'));
 });
 
-
-app.listen(process.env.PORT, '0.0.0.0');
+app.listen(PORT, function (req, res) {
+    const date = new Date();
+    console.log('Pizza ' + PORT + " " + ENV + " " + date);
+  });
