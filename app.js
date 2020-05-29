@@ -5,8 +5,8 @@ const fs = require('fs');
 const app = express();
 const compression = require('compression');
 
-const PORT = app.get('port') || 3000;
-const ENV = app.get('env');
+const PORT = process.env.PORT || 3000;
+const ENV = process.env.NODE_ENV || 'development';
 
 
 app.use(compression());
