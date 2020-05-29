@@ -3,7 +3,7 @@ import {
   fromJS,
 } from 'immutable';
 
-import { types } from '../actions/campaigns';
+import { types } from '../actions/pizzas';
 
 export default (state = ImmutableMap(), action) => {
   switch (action.type) {

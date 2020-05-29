@@ -1,9 +1,9 @@
-import campaigns from './campaigns';
+import pizzas from './pizzas';
 import loading from './loading';
 import payment from './payment';
 
 export default {
-  campaigns,
+  pizzas,
   loading,
   payment,
 };

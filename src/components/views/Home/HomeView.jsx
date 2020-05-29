@@ -3,9 +3,7 @@ import PropTypes from 'prop-types';
 import { Row, Col, Button } from 'antd';
 import { Link } from 'react-router-dom';
 import FactsCarousel from '../../common/FactsCarousel';
-import generalImages from '../../../img';
 import './style.css';
-import Helmet from 'react-helmet';
 
 
 class Home extends Component {
@@ -28,13 +26,6 @@ class Home extends Component {
     window.prerenderReady = true;
     return (
       <div className="view-container home-view-container">
-        <Helmet>
-          <title>PizzaExpress | Your favourite one</title>
-          <meta property="og:url" content="https://blooders.org" />
-          <meta property="og:title" content="Your favourite one" />
-          <meta property="og:description" content="Pizza Express Your favourite one." />
-          <meta property="og:image" content={`https://blooders.org${generalImages.uberBanner}`} />
-        </Helmet>
         <div className="landing-top-section landingImage">
           <div className="overlay">
             <Row className="header" type="flex" align="middle">

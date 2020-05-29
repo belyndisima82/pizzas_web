@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import ImmutablePropTypes from 'react-immutable-proptypes';
 import { Map as ImmutableMap } from 'immutable';
 import { Select, Row } from 'antd';
-import Helmet from 'react-helmet';
 import RegularCard from '../../core/RegularCard';
 import generalImages from '../../../img';
 import './style.css';
@@ -56,12 +55,6 @@ class Search extends Component {
     window.prerenderReady = true;
     return (
       <div className="view-container search-view background-view">
-        <Helmet>
-          <title>Pizza Express | Our pizzas</title>
-          <meta property="og:url" content="https://pizzaexpress/ourpizzas" />
-          <meta property="og:title" content="Your pizza." />
-          <meta property="og:description" content="Pick your favourite" />
-        </Helmet>
         <div style={slideStyle} className="slide">
           <div className="overlay"></div>
         </div>

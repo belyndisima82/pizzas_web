@@ -1,8 +1,8 @@
 import { fork, takeEvery, call, put } from 'redux-saga/effects';
-import { pizzasEntered } from '../actions/campaigns';
+import { pizzasEntered } from '../actions/pizzas';
 import { order } from '../actions/payment';
 import { types } from '../actions/session'
-import { getAllPizzas } from '../../data/campaigns';
+import { getAllPizzas } from '../../data/pizzas';
 import { doneFetching, fetching } from '../actions/loading';
 
 function* handleSetUpHomeView() {
