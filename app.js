@@ -1,5 +1,5 @@
 const express = require('express');
-
+const path = require('path');
 const app = express();
 const compression = require('compression');
 const publicPath = path.join(__dirname, '..', 'public');
